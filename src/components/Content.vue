@@ -1,5 +1,5 @@
 <template>
-    <div class="content" v-for="device in SmartDevices" :key="device.id">
+    <div class="content" v-for="device in SmartDevices" :key="device">
         <Device :device="device" @deviceId="setDevice($event)" />
     </div>
 </template>
