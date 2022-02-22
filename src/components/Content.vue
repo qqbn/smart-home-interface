@@ -8,7 +8,6 @@
 import Device from "./Device.vue";
 export default {
     props: ["SmartDevices"],
-    emits: ["deviceId"],
     components: { Device },
     methods: {
         setDevice(n) {
