@@ -45,22 +45,22 @@
                 <p v-show="!deviceToDisplay.isTurnedOn">Wyłączony</p>
             </div>
             <div class="data" v-if="isBulb(deviceToDisplay.brightness)">
-                <brightness
+                <Brightness
                     :data="deviceToDisplay.brightness"
                     @changeBright="changeBright($event)"
                 />
             </div>
             <div class="data" v-if="isBulb(deviceToDisplay.color)">
-                <bulb-color
+                <BulbColor
                     :data="deviceToDisplay.color"
                     @color="setColor($event)"
                 />
             </div>
             <div class="data" v-if="isOutlet(deviceToDisplay.powerConsumption)">
-                <outlet-power-cons :data="deviceToDisplay.powerConsumption" />
+                <OutletPowerCons :data="deviceToDisplay.powerConsumption" />
             </div>
             <div class="data" v-if="isThermo(deviceToDisplay.temperature)">
-                <temperature
+                <Temperature
                     :data="deviceToDisplay.temperature"
                     @tempChange="tempChange($event)"
                 />
@@ -173,7 +173,7 @@ export default {
                     ],
                     autoScroll: true,
                     listeners: {
-                        start: this.dragStartListener,
+                        // start: this.dragStartListener,
                         move: this.dragMoveListener,
                         end: this.onEndListener,
                     },
