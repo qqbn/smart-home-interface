@@ -438,8 +438,17 @@ export default {
 }
 @media only screen and (max-width: 500px) {
     .dialog {
-        width: 90%;
-        height: auto;
+        width: 90% !important;
+        height: auto !important;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .data-connection {
+        flex-direction: column;
+    }
+    .dialog {
+        width: 100% !important;
     }
 }
 </style>
